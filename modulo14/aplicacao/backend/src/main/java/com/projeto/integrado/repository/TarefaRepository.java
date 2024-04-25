@@ -2,9 +2,6 @@ package com.projeto.integrado.repository;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.projeto.integrado.entity.StatusTarefa;
-import com.projeto.integrado.entity.Tarefa;
+import com.projeto.integrado.entity.Recurso;
 
-public interface TarefaRepository extends JpaRepository<Tarefa, Integer> {
-	Optional<Tarefa> findByStatusTarefa(StatusTarefa statusTarefa);
-}
+public interface RecursoRepository extends JpaRepository
