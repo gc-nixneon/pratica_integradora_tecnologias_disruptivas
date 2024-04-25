@@ -58,7 +58,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
     <Grid container spacing={2}>
       <Card sx={style}>
         <CardHeader
-          title="Tarefas"
+          title="Atividades"
           subheader="Cadastro de Tarefas"
         /> 
         <CardContent sx={{
@@ -68,13 +68,13 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
           <Grid item xs={12}>
             <FormControl fullWidth>
               <Input id="tarefa_titulo" aria-describedby="tarefa_titulo_helper_text" value={tituloTarefa} onChange={e => { setTituloTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_titulo_helper_text">Título da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_titulo_helper_text">Atividade</FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12}>  
             <FormControl fullWidth>
               <Input id="tarefa_descricao" aria-describedby="tarefa_descricao_helper_text" value={descricaoTarefa} onChange={e => { setDescricaoTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Atividade.</FormHelperText>
             </FormControl>
           </Grid>
           <Grid container spacing={2} mt={1}>
@@ -87,7 +87,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_inicio_helper_text">Prazo Inicial de Entrega</FormHelperText>
               </FormControl>
             </Grid>  
             <Grid item xs={3}>  
@@ -99,12 +99,12 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_fim_helper_text">Prazo Final da Entrega</FormHelperText>
               </FormControl>
             </Grid>
             <Grid item xs={3}>  
               <FormControl fullWidth>
-                <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
+                <InputLabel htmlFor="tarefa_recurso">Matéria</InputLabel>
                 <Select
                   id="tarefa_recurso"
                   value={recursoTarefa}
@@ -116,9 +116,13 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                     fontWeight: 400,
                   }} 
                 >
-                  <MenuItem value={'Recurso 1'}>Recurso 1</MenuItem>
-                  <MenuItem value={'Recurso 2'}>Recurso 2</MenuItem>
-                  <MenuItem value={'Recurso 3'}>Recurso 3</MenuItem>
+                  <MenuItem value={'Matemática'}>Matemática</MenuItem>
+                  <MenuItem value={'Português'}>Português</MenuItem>
+                  <MenuItem value={'Biologia'}>Biologia</MenuItem>
+                  <MenuItem value={'Geografia'}>Geografia</MenuItem>
+                  <MenuItem value={'História'}>História</MenuItem>
+                  <MenuItem value={'Educação Física'}>Educação Física</MenuItem>
+                  <MenuItem value={'Sociologia'}>Sociologia</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
